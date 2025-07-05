@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advance Happy Birthday, My Love!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 50px;
+      text-shadow: 2px 2px 4px #00000050;
+    }
+
+    .quote {
+      font-size: 1.5em;
+      margin: 30px auto;
+      max-width: 700px;
+      font-style: italic;
+      text-shadow: 1px 1px 2px #00000030;
+    }
+
+    .slideshow {
+      margin: 40px auto;
+      max-width: 400px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      display: none;
+    }
+
+    .slideshow img.active {
+      display: block;
+    }
+
+    .emojis {
+      font-size: 2em;
+      margin-top: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 1em;
+      color: #fff;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Advance Happy Birthday, My dear devika 💖</h1>
+
+  <div class="quote">"You make my world brighter just by being in it."</div>
+  <div class="quote">"Every moment with you is a celebration of love."</div>
+
+  <div class="slideshow">
+    <img src="https://source.unsplash.com/400x300/?birthday,cake" class="active" alt="Slide 1">
+    <img src="https://source.unsplash.com/400x300/?love,balloons" alt="Slide 2">
+    <img src="https://source.unsplash.com/400x300/?romantic,flowers" alt="Slide 3">
+  </div>
+
+  <div class="emojis">🎉🎈🎁💐💞</div>
+
+  <div class="footer">
+    Made with infinite love 💌 Just for you.
+  </div>
+
+  <script>
+    // Simple slideshow
+    let slides = document.querySelectorAll('.slideshow img');
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000);
+  </script>
+</body>
+</html>
+
